@@ -1,118 +1,128 @@
 require("dotenv").config();
 const { REST, Routes, ApplicationCommandOptionType } = require("discord.js");
 
+const juegos = [
+    {
+        name: "Valorant",
+        value: "Valorant"
+    },
+    {
+        name: "League of legends",
+        value: "League of legends"
+    },
+    {
+        name: "Fortnite",
+        value: "Fortnite"
+    },
+    {
+        name: "Ver anime",
+        value: "Ver anime"
+    },
+    {
+        name: "Osu",
+        value: "Osu"
+    },
+    {
+        name: "Juego misterioso uwu",
+        value: "Juego misterioso uwu"
+    },
+    {
+        name: "Lethal company",
+        value: "Lethal company"
+    },
+    {
+        name: "Juego de miedo",
+        value: "Juego de miedo"
+    },
+    {
+        name: "Prueba o verdad",
+        value: "Prueba o verdad"
+    },
+    {
+        name: "el uno con el otro",
+        value: "el uno con el otro"
+    }
+]
+
 const commands = [
     {
-        name: "mas-gay",
-        description: "Dice quien es mas gay de los dos",
+        name: "que-jugamos",
+        description: "Decido que juego jugar",
         options: [
             {
-                name: "primera-persona",
-                description: "La primera persona",
+                name: "primer-juego",
+                description: "El primer juego posible",
                 type: ApplicationCommandOptionType.String,
-                choices: [
-                    {
-                        name: "Orlito",
-                        value: "Orlito"
-                    },
-                    {
-                        name: "Mangle",
-                        value: "Mangle"
-                    },
-                    {
-                        name: "Adri",
-                        value: "Adri"
-                    },
-                    {
-                        name: "Felu",
-                        value: "Felu"
-                    },
-                    {
-                        name: "Nat",
-                        value: "Nat"
-                    },
-                    {
-                        name: "Cabra",
-                        value: "Cabra"
-                    },
-                    {
-                        name: "Chara",
-                        value: "Chara"
-                    },
-                    {
-                        name: "Fell",
-                        value: "Fell"
-                    },
-                    {
-                        name: "Grace",
-                        value: "Grace"
-                    },
-                    {
-                        name: "Hielo",
-                        value: "Hielo"
-                    }
-                ],
+                choices: juegos,
                 required: true
             },
             {
-                name: "segunda-persona",
-                description: "La segunda persona",
+                name: "segundo-juego",
+                description: "El segundo juego posible",
                 type: ApplicationCommandOptionType.String,
-                choices: [
-                    {
-                        name: "Orlito",
-                        value: "Orlito",
-                        gayLevel: 2
-                    },
-                    {
-                        name: "Mangle",
-                        value: "Mangle",
-                        gayLevel: 3
-                    },
-                    {
-                        name: "Adri",
-                        value: "Adri"
-                    },
-                    {
-                        name: "Felu",
-                        value: "Felu"
-                    },
-                    {
-                        name: "Nat",
-                        value: "Nat"
-                    },
-                    {
-                        name: "Cabra",
-                        value: "Cabra"
-                    },
-                    {
-                        name: "Chara",
-                        value: "Chara"
-                    },
-                    {
-                        name: "Fell",
-                        value: "Fell"
-                    },
-                    {
-                        name: "Grace",
-                        value: "Grace"
-                    },
-                    {
-                        name: "Hielo",
-                        value: "Hielo"
-                    }
-                ],
+                choices: juegos,
                 required: true
-            }
+            },
+            {
+                name: "tercer-juego",
+                description: "El tercer juego posible",
+                type: ApplicationCommandOptionType.String,
+                choices: juegos,
+                required: false
+            },
+            {
+                name: "cuarto-juego",
+                description: "El cuarto juego posible",
+                type: ApplicationCommandOptionType.String,
+                choices: juegos,
+                required: false
+            },
+            {
+                name: "quinto-juego",
+                description: "El quinto juego posible",
+                type: ApplicationCommandOptionType.String,
+                choices: juegos,
+                required: false
+            },
+            {
+                name: "sexto-juego",
+                description: "El sexto juego posible",
+                type: ApplicationCommandOptionType.String,
+                choices: juegos,
+                required: false
+            },
+            {
+                name: "séptimo-juego",
+                description: "El séptimo juego posible",
+                type: ApplicationCommandOptionType.String,
+                choices: juegos,
+                required: false
+            },
+            {
+                name: "octavo-juego",
+                description: "El octavo juego posible",
+                type: ApplicationCommandOptionType.String,
+                choices: juegos,
+                required: false
+            },
+            {
+                name: "noveno-juego",
+                description: "El noveno juego posible",
+                type: ApplicationCommandOptionType.String,
+                choices: juegos,
+                required: false
+            },
+            {
+                name: "décimo-juego",
+                description: "El décimo juego posible",
+                type: ApplicationCommandOptionType.String,
+                choices: juegos,
+                required: false
+            },
         ]
-    },
-    {
-        name: "gloglo",
-        description: "Muestra los penes que se ha comido cabra"
-    },
-    {
-        name: "embed",
-        description: "Sends an embed"
+    },{
+        name: "te-amo",
+        description: "Exprésale a tu pareja lo mucho que la amas",
     }
 ];
 
@@ -130,6 +140,6 @@ const rest = new REST({ version: "10"}).setToken(process.env.TOKEN);
 
         console.log("slash commands registered successfully!");
     } catch (error) {
-        console.log(`There was an error: ${error}`)
+        console.log(`There was an error: ${error}`);
     }
 })();
